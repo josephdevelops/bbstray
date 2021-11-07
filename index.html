@@ -1,27 +1,73 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <style>
-body {
+body
+    {
     background-color:#fdfafd;
-}
+    font-family:"arial"
+    }
 
-#videoloop {
-}
-    
-#videodiv {
+#videodiv
+    {
     display:flex; 
-    align-content:flex-start;
-    width:85%;margin-right:15%;
-    padding:-3px!important;
-    overflow:hidden;
+    align-content:space-around;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+        padding-left:12%;
+        padding-right:12%;
+    }
+
+#videoloop
+    {
+    flex:1;
     }
     
+#videoloop video
+    {
+    width:81%;
+    margin:10%;
+    padding:-1%!important;
+    overflow:hidden;
+    max-height:100%;min-width:100%;
+    }
+ 
  #infodiv
     {
         flex:1;justify-content:center;
+        padding-left:12%;
+        padding-right:12%;
     }
+
+        
+ #bbstray
+    {
+        width:76%;
+        padding-left:12%;
+        padding-right:12%;
+        padding-bottom:8%;
+    }
+
+    .link {
+        padding:22px 22px 22px 22px;
+        border-radius:99px;
+        border-width:2px;
+        border-color: red;
+        border-style:solid;
+        margin:1%;
+
+         display:flex;
+         
+    align-items:center;
+    }
+
+    .link img {
+        max-height:28px;
+    }
+
+ 
 </style>
 
 <head>
@@ -30,19 +76,19 @@ body {
 </head>
 <body>
 <div id="videodiv">
-<video id="videoloop" muted autoplay loop>
-  <source src="https://josephdevelops.github.io/bbstray/video.mp4" type="video/mp4" />
+<div id="videoloop">
+<video muted autoplay loop>
+  <source src="video.mp4" type="video/mp4" />
   <source src="https://josephdevelops.github.io/bbstray/video.ogg" type="video/ogg" />
 </video>
+</div>
 <div id="infodiv">
-<br> 
-<img src="logo.png" style="width:85%">
-       Spotify
-    <br>Apple\
-    <br>YouTube
+<img id="bbstray" src="logo.png">
+    <br><div class="link">Listen onSpotify</div>
+    <br><div class="link">&nbsp;&nbsp;&nbsp;&nbsp;<img src="amusic.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Apple Music</strong></div>
+    <br><div class="link">Watch on YouTube</img></div>
     <br>
     <br>Sign up for Mailing List
-tnesiaotnesiarots
     </div>
 
 </div>
