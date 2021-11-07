@@ -2,6 +2,9 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
+
+
+
 <style>
 body
     {
@@ -15,7 +18,7 @@ body
     align-content:space-around;
     justify-content:space-around;
     align-items:center;
-    height:100%;
+    min-height:98%;
         padding-left:12%;
         padding-right:12%;
     }
@@ -27,7 +30,7 @@ body
     
 #videoloop video
     {
-    width:81%;
+    width:82%;
     margin:10%;
     padding:-1%!important;
     overflow:hidden;
@@ -50,11 +53,18 @@ body
         padding-bottom:8%;
     }
 
+ #bbstraymobile
+    {
+    display:none;
+    width:80%;
+    padding:5% 10% 2% 10%;
+
+    }
+
     .link {
         padding:22px 22px 22px 22px;
         border-radius:99px;
         border-width:2px;
-        border-color: red;
         border-style:solid;
         margin:1%;
 
@@ -67,31 +77,80 @@ body
         max-height:28px;
     }
 
+    #spotify
+    {
+    border-color:#2ebd59;
+    }
+    #amusic
+    {
+    border-color:#ff7f39;
+    }
+    #youtube
+    {
+    border-color:red;
+    }
+
+    @media screen and (max-width: 800px) {
+    #bbstray {
+        display:none;
+    }
+
+    #bbstraymobile {
+        display:block
+    }
+    #videodiv {
+        height:auto;
+        flex-direction:column;
+        }
+        #videodiv,
+        #videoloop video {
+        padding-left:0;
+        padding-right:0;
+        margin:0;
+
+        }
+
+    #videoloop,
+    #infodiv {
+       
+    }
+
+  }
  
 </style>
 
 <head>
     <meta charset="utf-8" />
     <title>Bryan B. Stray, Knew Me When - Out Now</title>
+
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6afffcaf09ac89117c663d236/c2a0750056e0bb5a157ce9c97.js");</script>
+
 </head>
 <body>
-<div id="videodiv">
-<div id="videoloop">
-<video muted autoplay loop>
-  <source src="video.mp4" type="video/mp4" />
-  <source src="https://josephdevelops.github.io/bbstray/video.ogg" type="video/ogg" />
-</video>
-</div>
-<div id="infodiv">
-<img id="bbstray" src="logo.png">
-    <br><div class="link">Listen onSpotify</div>
-    <br><div class="link">&nbsp;&nbsp;&nbsp;&nbsp;<img src="amusic.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Apple Music</strong></div>
-    <br><div class="link">Watch on YouTube</img></div>
-    <br>
-    <br>Sign up for Mailing List
-    </div>
 
-</div>
+<img id="bbstraymobile" src="logo.png">
+
+    <div id="videodiv">
+
+        <div id="videoloop">
+            <video muted autoplay loop>
+                <source src="video.mp4" type="video/mp4" />
+                <source src="https://josephdevelops.github.io/bbstray/video.ogg" type="video/ogg" />
+            </video>
+        </div>
+
+      
+
+        <div id="infodiv">
+            <img id="bbstray" src="logo.png">
+            <br><div class="link" id="spotify">&nbsp;&nbsp;&nbsp;&nbsp;<img src="spotify.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Spotify</strong></div>
+            <br><div class="link" id="amusic">&nbsp;&nbsp;&nbsp;&nbsp;<img src="amusic.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Apple Music</strong></div>
+            <br><div class="link" id="youtube">&nbsp;&nbsp;&nbsp;&nbsp;<img src="youtube.png">&nbsp;&nbsp;&nbsp;<strong>Watch on Youtube</strong></div>
+            <br>
+            <br>Sign up for Mailing List
+        </div>
+
+    </div>
 
 </body>
 </html>
