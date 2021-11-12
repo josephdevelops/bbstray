@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -54,8 +54,6 @@ html
 
  #bbstraymobile {
     display:none;
-    width:80%;
-    padding:5% 10% 2% 10%;
 
     }
 
@@ -121,7 +119,9 @@ html
         }
 
     #bbstraymobile {
-        display:block
+        display:block;
+        max-width:80%;
+        margin:10% 10% 0 10%;
         }
 
     #videodiv {
@@ -139,15 +139,37 @@ html
         #videodiv {
           min-height:auto
         }
+        
+        #infodiv {
+          padding:0;
+          display:flex;
+          width:auto;
+        flex-direction:column;
+        width: 80%;
+          
+        }
+        .link {
+          
+          flex:1;
+          margin:0;
+          font-size:calc(14px + 1vh);
+          padding: 8%;
+          width:auto;
+        }
 
-   .link {
-          min-width:50%;
+        .link:hover {
+          
+          flex:1;
+          margin:0;
+          font-size:calc(14px + 1vh);
+          padding: 8%;
+          width:auto;
         }
 
   }
  
 
-
+}
  
 
 </style>
@@ -204,6 +226,13 @@ html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9qF7jEFd4I4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </body>
 </html>
