@@ -2,12 +2,11 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-
-
-
 <style>
-body
+body,
+html
     {
+    background:#fff;
     font-family:"arial"
     }
 
@@ -24,7 +23,7 @@ body
 
 #videoloop
     {
-    flex:1;
+    flex:2;
     }
     
 #videoloop video
@@ -38,22 +37,22 @@ body
  
  #infodiv
     {
-        flex:1;justify-content:center;
+        flex:1;
         padding-left:12%;
         padding-right:12%;
+        justify-content:flex-end;
     }
 
         
  #bbstray
     {
-        width:76%;
-        padding-left:12%;
-        padding-right:12%;
+        width:100%;
+        padding-left:0;
+        padding-right:0;
         padding-bottom:8%;
     }
 
- #bbstraymobile
-    {
+ #bbstraymobile {
     display:none;
     width:80%;
     padding:5% 10% 2% 10%;
@@ -61,15 +60,31 @@ body
     }
 
     .link {
-        padding:22px 22px 22px 22px;
+        padding:12px 12px 12px 12px;
         border-radius:99px;
         border-width:2px;
         border-style:solid;
-        margin:1%;
+        margin:auto;
+        display:flex;
+        width:260px;
+        align-items:center;
+        text-decoration:none;
+        color:black;
+        font-size:calc(9px + 0.8vh);
+        
+  transition: all 1000ms ease;
+    }
 
-         display:flex;
-         
-    align-items:center;
+    .link:hover {
+      padding:12px 12px 12px 12px;
+       background-color:rgb(41, 41, 41);
+       color:white;
+       border: 2px dotted black!important;
+  color: #575757;
+  background: #fff;
+  
+  transition: all 1000ms ease;
+ 
     }
 
     .link img {
@@ -80,255 +95,66 @@ body
     {
     border-color:#2ebd59;
     }
+
     #amusic
     {
     border-color:#ff7f39;
     }
+
     #youtube
     {
     border-color:red;
     }
-
-	hgroup, #emailform {
-		display:none;
-	}
     
-    form {
-      width: 380px;
-      margin: 4em auto;
-      padding: 3em 2em 2em 2em;
-      background: #fafafa;
-      border: 1px solid #ebebeb;
-      box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
-    }
-    
-    .group { 
-      position: relative; 
-      margin-bottom: 45px; 
-    }
-    
-    input {
-      font-size: 18px;
-      padding: 10px 10px 10px 5px;
-      -webkit-appearance: none;
-      display: block;
-      background: #fafafa;
-      color: #636363;
-      width: 100%;
-      border: none;
-      border-radius: 0;
-      border-bottom: 1px solid #757575;
-    }
-    
-    input:focus { outline: none; }
-    
-    
-    /* Label */
-    
-    label {
-      color: #999; 
-      font-size: 15px;
-      font-weight: normal;
-      position: absolute;
-      pointer-events: none;
-      left: 5px;
-      top: -15px;
-      transition: all 0.2s ease;
-    }
-    
-    
-    /* active */
-
-    
-   
-    
-    
-    /* Button */
-    
-    .button {
-      position: relative;
-      display: inline-block;
-      padding: 12px 24px;
-      margin: .3em 0 1em 0;
-      width: 100%;
-      vertical-align: middle;
-      color: #004345;
-      font-size: 16px;
-      line-height: 20px;
-      -webkit-font-smoothing: antialiased;
-      text-align: center;
-      letter-spacing: 1px;
-      background: transparent;
-      border: 2px solid #004345;
-      border-bottom: 2px solid #004345;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: all 0.15s ease;
-    }
-    .button:focus { outline: 0; }
-    
-    
-    /* Button modifiers */
-    
-    .buttonBlue {
-      background: 
-      text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
-    }
-    
-    .buttonBlue:hover { background: #004345;
-    color: #fff;}
-
-   
-    hgroup { 
-      text-align:center;
-      margin-top: 4em;
-      color: #004300;
-      font-weight: 300; 
-    }
-    
-    #succ {
-      display: none;
-      background-color: #dff0d8;
-      border: 2px solid #dff0d8;
-      border-radius: 5px;  
-      height:40px;
-      text-align:left;
-      top:25%;
-      position: relative;
-      color: #3c763d;
-      margin-left:15px;
-    }
-    #txt{
-      margin-left:15px;
-      margin-top:0%;
+    .webseries {
+      display:flex;
+      align-content:space-around;
+      justify-content:space-around;
+      align-items:center;
+      margin:10% 10%;
       
     }
-    #fail {
-      display: none;
-      background-color: #ff9999;
-      border: 2px solid #ff9999;
-      border-radius: 5px;  
-      height:40px;
-      text-align:left;
-      top:50%;
-      position: relative;
-      color: #9F0303;
-      margin-left:15px;
-    }
-    
-    
-    
 
-    @media screen and (max-width: 800px) {
+    @media only screen and (max-width: 1000px) {
     #bbstray {
         display:none;
-    }
+        }
 
     #bbstraymobile {
         display:block
-    }
+        }
+
     #videodiv {
         height:auto;
         flex-direction:column;
         }
-        #videodiv,
-        #videoloop video {
+
+    #videodiv,
+    #videoloop video {
         padding-left:0;
         padding-right:0;
         margin:0;
-
         }
 
-    #videoloop,
-    #infodiv {
-       
-    }
+        #videodiv {
+          min-height:auto
+        }
+
+ 
 
   }
  
+
+
+ 
+
 </style>
 
 <head>
     <meta charset="utf-8" />
     <title>Bryan B. Stray, Knew Me When - Out Now</title>
-
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6afffcaf09ac89117c663d236/c2a0750056e0bb5a157ce9c97.js");</script>
-    
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBJFCYzZ0XmSyzbFaS2q6O3-vCCGHYQ6aQ",
-    authDomain: "bbstray-e1502.firebaseapp.com",
-    projectId: "bbstray-e1502",
-    storageBucket: "bbstray-e1502.appspot.com",
-    messagingSenderId: "918240380572",
-    appId: "1:918240380572:web:6ab42f10a6d9689f568f59"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
-
-    <script type="javascript">
-    function saveToFirebase() 
-{
-    const data = document.getElementById('emailForm').elements[0].value;
- 
-
-  if(ValidateEmail(data))
-  {
-    database.ref('emails').push({ email: data}).then(function(snapshot) {
-      pass(); // some success method
-      }, function(error) 
-         {
-            console.log('error' + error);
-            fail(); // some error method
-          });
-     document.getElementById('frm1').reset();
-  }
-
-}
-
-function ValidateEmail(mail) 
-{
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail))
-        {
-          pass();
-          return (true);
-        }
-    else{
-          fail();
-          return (false);
-          }
-} 
-
-
-function fail()
-{
-
-  $('#fail').finish().show().delay(1000).fadeOut(6000);
-
-}
-function pass()
-{
- 
-$('#succ').finish().show().delay(1000).fadeOut(6000);
-
-}
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-</script>
-
-
 </head>
+
 <body>
 
 <img id="bbstraymobile" src="logo.png">
@@ -336,8 +162,9 @@ const analytics = getAnalytics(app);
     <div id="videodiv">
 
         <div id="videoloop">
-            <video muted autoplay loop>
+            <video poster="video.jpg" muted autoplay loop>
                 <source src="video.mp4" type="video/mp4" />
+                <source src="https://josephdevelops.github.io/bbstray/video.ogg" type="video/ogg" />
             </video>
         </div>
 
@@ -345,37 +172,36 @@ const analytics = getAnalytics(app);
 
         <div id="infodiv">
             <img id="bbstray" src="logo.png">
-            <br><div class="link" id="spotify">&nbsp;&nbsp;&nbsp;&nbsp;<img src="spotify.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Spotify</strong></div>
-            <br><div class="link" id="amusic">&nbsp;&nbsp;&nbsp;&nbsp;<img src="amusic.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Apple Music</strong></div>
-            <br><div class="link" id="youtube">&nbsp;&nbsp;&nbsp;&nbsp;<img src="youtube.png">&nbsp;&nbsp;&nbsp;<strong>Watch on Youtube</strong></div>
-            <br>
-            <br>
 
             
-	<div class="alert alert-success" role="alert" id="succ">
-		<p id="txt">
-		 <strong>Success!</strong> You have been signed up successfully!
-		</p>
-	</div>
-<div class="alert " role="alert" id="fail">
-		<p id="txt">
-				<strong>Sorry!</strong> You have entered an invalid E-mail.
-		</p>
-</div>
-
-	<form id="emailForm">
-	  <div class="group">
-				<input type="email" name="email_add"><span class="highlight"></span><span class="bar"></span>
-					<label>Email</label>
-		</div>
-	<button value="submit" type="button" class="button buttonBlue" value= "submit_button" id="sub" onclick="saveToFirebase()">Subscribe
-	</button>
-	</form>
-
-
+            <br><a class="link" type="button" id="spotify">&nbsp;&nbsp;&nbsp;&nbsp;<img src="spotify.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Spotify</strong>&nbsp;&nbsp;&nbsp;</a>
+            <br><a class="link" type="button" id="amusic">&nbsp;&nbsp;&nbsp;&nbsp;<img src="amusic.png">&nbsp;&nbsp;&nbsp;<strong>Listen on Apple Music</strong>&nbsp;&nbsp;&nbsp;</a>
+            <br><a class="link" type="button" id="youtube" href="https://www.youtube.com/c/bryanbstray">&nbsp;&nbsp;&nbsp;&nbsp;<img src="youtube.png">&nbsp;&nbsp;&nbsp;<strong>Watch on Youtube</strong>&nbsp;&nbsp;&nbsp;</a>
+            <br>
+            <br>
         </div>
 
+        
+
     </div>
+
+    <div class="webseries">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9qF7jEFd4I4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    </div>
+
+    <div class="webseries">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9qF7jEFd4I4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+<div class="webseries">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9qF7jEFd4I4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
 
 </body>
 </html>
