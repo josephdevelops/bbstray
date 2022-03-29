@@ -1,6 +1,6 @@
 # BBStray
 
-This is a one-page site I created for my friend. He was simultaneously releasing an EP and video series on YouTube. 
+This is a one-page site I created for my friend whom is a musician and film maker. He was simultaneously releasing an EP and video series on YouTube. 
 
 View the site here: https://josephdevelops.github.io/BBStray/
 
